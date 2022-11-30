@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador</title>
+</head>
+<body>
+Bem-Vindo {{usertime}}
+    <form action="/simulacao" method="post">
+        <div>
+                <label for="nomeSimulacao">Nome da Simulacao:</label>
+                <input placeholder="Ex: Simulacao Sao Paulo" type="text" id="nomeSimulacao" name="nomeSimulacao">
+        </div>
+        <div>
+                <label for="EV">Expectativa de Vida em Anos:</label>
+                <input placeholder="Ex: 69" type="number" id="EV" name="EV">
+        </div>
+        <div>
+                <label for="AME">Anos Medios de Escolaridade:</label>
+                <input placeholder="Ex: 15" type="number" id="AME" name="AME">
+        </div>
+        <div>
+                <label for="AEE">Anos Esperados de Escolaridade:</label>
+                <input placeholder="Ex: 15" type="number" id="AEE" name="AEE">
+        </div>
+        <div>
+                <label for="PIBpc">PIB per Capita em USD:</label>
+                <input placeholder="Ex: 7518.83" type="number" id="PIBpc" name="PIBpc">
+        </div>
+        <div>
+            <button type="submit">Iniciar Simulacao</button>
+        </div>
+    </form>
+<div>
+    <label>IDH:</label>
+    {{res}}
+</div>
+<div>
+    {{rescad}}
+</div>
+<div>
+    <form action="/home">
+        <input type="submit" value="Voltar"/>
+    </form>
+</div>
+</body>
+</html>
