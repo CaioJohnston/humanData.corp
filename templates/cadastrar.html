@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <form action="/cadastro" method="post">
-        <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/registrar.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <section class="areaRegistro">
+        <div class="registro">
+            <div>
+                <img src="static/css/humanData.corp.png">
+            </div>
+
+            <form action="/cadastro" method="post">
+                <input type="text" id="nome" name="nome" placeholder="Nome" autofocus>
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <input type="submit" value="Finalizar">
+            </form>
+            {{res}}
         </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email">
-        </div>
-        <div>
-            <label for="senha">Senha:</label>
-            <input type="text" id="senha" name="senha">
-        </div>
-        <div>
-            <button type="submit">Finalizar</button>
-        </div>
-    </form>
-{{res}}
+    </section>
+</body>
 </html>
