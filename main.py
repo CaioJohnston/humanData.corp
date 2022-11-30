@@ -2,16 +2,15 @@ from flask import *
 from autenticador import cadastrar as cd, login as lg, getUser
 from simulador import calcIDH
 from bancodedados import consultarSimu, cadastrarSimu
-from time import sleep
 
 usuario = ''
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def main():
-    return render_template('main.html')
+    return render_template('inicio.html')
 
 
 @app.route('/home')
@@ -46,7 +45,7 @@ def iniciarC():
 @app.route('/cadastro', methods=["POST"])
 def cadastrar():
     if cd(request.form['nome'], request.form['email'], request.form['senha']) == 'true':
-        return render_template('main.html', res='Cadastro Realizado com Sucesso')
+        return render_template('logar.html', res='Cadastro Realizado com Sucesso')
     else:
         return render_template('cadastrar.html', res='Email ja Cadastrado.')
 

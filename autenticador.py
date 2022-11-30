@@ -8,11 +8,12 @@ class Users:
 
 
 def cadastrar(nome, email, senha):
+    newuser = Users(nome, email, senha)
     for usuario in consultarDB():
         if usuario[1] == email:
             return 'false'
             break
-    cadastrarDB(nome, email, senha)
+    cadastrarDB(newuser.nome, newuser.email, newuser.senha)
     return 'true'
 
 
