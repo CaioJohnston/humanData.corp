@@ -1,0 +1,88 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+*,html,body{
+    padding:0;
+    margin:0;
+}
+.logo{
+    position: fixed;
+    left: 1400px;
+    top: 0;
+
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.conteudo {
+    position: fixed;
+    width: 689px;
+    height: 685px;
+    left: 39px;
+    top: 415px;
+
+    background: rgba(7, 30, 44, 0.7);
+    border-radius: 14px;
+}
+
+h1{
+    
+    width: 609px;
+    height: 159px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 66px;
+    line-height: 68px;
+    padding-top: 40px;
+    padding-left: 40px;
+
+    color: #C6CAD8;
+}
+
+p1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    color: #C6CAD8;
+    font-size: 24px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+p2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    color: #C6CAD8;
+    font-size: 24px;
+    padding-left: 40px;
+}
+  
+#botao {
+    position: fixed;
+    width: 220px;
+    height: 70px;
+    left: 273px;
+    top: 812px;
+
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    background: linear-gradient(270deg, #000000 -101.82%, #CE9BEE -23.23%, #1D607D 132.49%, #FFFFFF 165.31%);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    right: 0;
+}
+  
+#botao:hover {
+    background: #ddd;
+    color: black;
+}
