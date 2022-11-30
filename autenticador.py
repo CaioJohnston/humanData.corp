@@ -2,7 +2,7 @@ from bancodedados import consultarDB, cadastrarDB
 
 class Users:
     def __init__(self, nome, email, senha):
-        self.nome = nome;
+        self.nome = nome
         self.email = email
         self.senha = senha
 
@@ -22,3 +22,10 @@ def login(email, senha):
             return 'true'
             break
     return 'false'
+
+
+def getUser(email):
+    for usuario in consultarDB():
+        if usuario[1] == email:
+            return usuario[0]
+            break
