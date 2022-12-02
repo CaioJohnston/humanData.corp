@@ -18,5 +18,5 @@ compará-lo com os demais IDHs calculados no site.
 ```
 - pip install flask
 - pip install sympy
-- pip install psycopg2
+- pip install psycopg2-binary
 ```
