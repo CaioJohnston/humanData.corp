@@ -2,16 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/resultados.css">
     <title>Resultados</title>
 </head>
 <body>
-<div>
-    {{res}}
-</div>
-<div>
-    <form action="/home">
-        <input type="submit" value="Voltar"/>
-    </form>
-</div>
+    <h1>Bem-Vindo, {{usertime}}</h1>
+
+    <div class="logo">
+        <img src="static/css/humanData.corp.png">
+    </div>
+
+    <section class="areaLista">
+
+        <div class="lista">
+            <h2>Lista de Simulações</h2>
+            <table>
+                <tr>
+                  <th>Nome de Usuário</th>
+                  <th>Nome da Simulação</th>
+                  <th>IDH</th>
+                  <th>IEV</th>
+                  <th>IE</th>
+                  <th>IR</th>
+                </tr>
+                {% for dado in dados %}
+                <tr>
+				    <td>{{ dado[0] }}</td>
+				    <td>{{ dado[1] }}</td>
+                    <td>{{ dado[2] }}</td>
+                    <td>{{ dado[3] }}</td>
+				    <td>{{ dado[4] }}</td>
+                    <td>{{ dado[5] }}</td>
+			    </tr>
+                {% endfor %}
+            </table>
+            <form action="/simulacao">
+                <input id="botao" type="submit" value="Voltar para Simulacao"/>
+             </form>
+        </div>
+    </section>
 </body>
 </html>

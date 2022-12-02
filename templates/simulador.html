@@ -2,46 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/simulador.css">
     <title>Simulador</title>
 </head>
 <body>
-Bem-Vindo {{usertime}}
-    <form action="/simulacao" method="post">
-        <div>
-                <label for="nomeSimulacao">Nome da Simulacao:</label>
-                <input placeholder="Ex: Simulacao Sao Paulo" type="text" id="nomeSimulacao" name="nomeSimulacao">
+    <h1>Bem-Vindo, {{usertime}}</h1>
+    <div class="header">
+        <form action="/">
+            <input id="botaoSair" type="submit" value="Sair"/>
+        </form>
+    </div>
+    <div class = "logo">
+        <img src="static/css/humanData.corp.png">
+    </div>
+    <section class="areaSimulador">
+        <div class="Simulador">
+            <h3>Insira os Valores:</h3>
+            <form action="/simulacao" method="post">
+                <input placeholder="Nome da Simulacao" type="text" id="nomeSimulacao" name="nomeSimulacao">
+                <input placeholder="Expectativa de Vida" type="number" id="EV" name="EV">
+                <input placeholder="Anos Medios de Escolaridade" type="number" id="AME" name="AME">
+                <input placeholder="Anos Esperados de Escolaridade" type="number" id="AEE" name="AEE">
+                <input placeholder="PIB per Capita em USD" type="number" id="PIBpc" name="PIBpc">
+                <input id="botaoSimu" type="submit" value="Simular"/>
+            </form>
+            <div class="retorno">
+                <label>{{res}}</label>
+            </div>
+            <div class="retorno2">
+                <label>{{res2}}</label>
+            </div>
         </div>
-        <div>
-                <label for="EV">Expectativa de Vida em Anos:</label>
-                <input placeholder="Ex: 69" type="number" id="EV" name="EV">
+    </section>
+    <section class="areaSimulacao">
+        <div class="Simulacao">
+                <h2>Resultados</h2>
+            <form>
+                <p>IDH:     <label>{{idh}}</label></p>
+                <p>IEV:     <label>{{iev}}</label></p>
+                <p>IE:      <label>{{ie}}</label></p>
+                <p>IR:      <label>{{ir}}</label></p>
+            </form>
+            <form action="/resultados">
+                <input id="botaoVolt" type="submit" value="Ver outras Simulacoes"/>
+            </form>
         </div>
-        <div>
-                <label for="AME">Anos Medios de Escolaridade:</label>
-                <input placeholder="Ex: 15" type="number" id="AME" name="AME">
-        </div>
-        <div>
-                <label for="AEE">Anos Esperados de Escolaridade:</label>
-                <input placeholder="Ex: 15" type="number" id="AEE" name="AEE">
-        </div>
-        <div>
-                <label for="PIBpc">PIB per Capita em USD:</label>
-                <input placeholder="Ex: 7518.83" type="number" id="PIBpc" name="PIBpc">
-        </div>
-        <div>
-            <button type="submit">Iniciar Simulacao</button>
-        </div>
-    </form>
-<div>
-    <label>IDH:</label>
-    {{res}}
-</div>
-<div>
-    {{rescad}}
-</div>
-<div>
-    <form action="/home">
-        <input type="submit" value="Voltar"/>
-    </form>
-</div>
+    </section>
 </body>
 </html>
