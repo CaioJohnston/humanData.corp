@@ -1,5 +1,4 @@
 # humanData.corp
-Projeto Interdisciplinar - CC4MA - 2022
 A **humanData.corp** é um projeto interdisciplinar que abrange as seguintes matérias:
 * Laboratório de Programação Avançada
 * Resolução Diferencial de Problemas
