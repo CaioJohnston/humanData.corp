@@ -1,5 +1,6 @@
 from bancodedados import consultarDB, cadastrarDB
 
+
 class Users:
     def __init__(self, nome, email, senha):
         self.nome = nome

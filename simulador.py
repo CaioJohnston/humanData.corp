@@ -13,8 +13,12 @@ def calcIDH(EV, AME, AEE, PIBpc):
     IAEE = AEE / 20.6  # Anos esperados de escolaridade (quantidade de anos em que uma criança de 5 anos frequentará escolas)
     IE = sqrt(IAME * IAEE) / 0.951
 
-    IR = ln(PIBpc) - ln(163) / ln(108.211) - ln(163)  # Indice de Renda
+    IR = ln(PIBpc) - log(163) / ln(108.211) - ln(163)  # Indice de Renda
 
     IDH = N(cbrt(IEV * IE * IR))
 
-    return IDH
+    IEV = N(IEV)
+    IE = N(IE)
+    IR = N(IR)
+
+    return IDH, IEV, IE, IR

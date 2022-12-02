@@ -25,9 +25,9 @@ def consultarSimu():
     db.close()
 
 
-def cadastrarSimu(userres, nomesimu, ressimu):
+def cadastrarSimu(userres, nomesimu, idh, iev, ie, ir):
     db = connect('postgres://cobbspuz:hTcSn-CvfzonT34s_uftcX_7ZeDTl7Zb@tuffi.db.elephantsql.com/cobbspuz')
     with db.cursor() as cursor:
-        cursor.execute("INSERT INTO simulacoes (userres, nomesimu, ressimu) VALUES (%s, %s, %s) ;", (userres, nomesimu, ressimu,))
+        cursor.execute("INSERT INTO simulacoes (userres, nomesimu, ressimu, iev, ie, ir) VALUES (%s, %s, %s, %s, %s, %s) ;", (userres, nomesimu, idh, iev, ie, ir))
         db.commit()
     db.close()
