@@ -1,0 +1,154 @@
+body{
+    background-color: #071E2C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    position: fixed;
+    left: 1400px;
+    top: 0;
+
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.areaSimulador{
+    position: fixed;
+    left: 188px;
+    top: 300px;
+    height: 100vh;
+    border-radius: 8px;
+}
+
+.Simulador{
+    position: fixed;
+    left: 300px;
+    top: 280px;
+    background-color: #1C1C1C;
+    width: 360px;
+    height: 460px;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.Simulador form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Simulador input{
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: #252A34;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.Simulador img{
+    width: 300px;
+    height: auto;
+}
+
+.input::placeholder{
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+form [type="submit"]{
+    display: block;
+    background: linear-gradient(270deg, #000000 -101.82%, #CE9BEE -23.23%, #1D607D 132.49%, #FFFFFF 165.31%);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1{
+    color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Simulacao{
+    position: absolute;
+    width: 770px;
+    height: 600px;
+    left: 900px;
+    top: 240px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    background: #1C1C1C;
+    border-radius: 30px;
+}
+
+h2{
+    color: white;
+    font-size: 36px;
+}
+
+h3{
+    color: white;
+    font-size: 16px; 
+}
+
+p{
+    color: white;
+    padding-right: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 45px;
+}
+
+.Simulacao label{
+    color: white;
+    background-color: #252A34;
+    padding: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+#botaoVolt{
+    position: fixed;
+    width: 260px;
+    height: 60px;
+    left: 1165px;
+    top: 740px;
+
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background: linear-gradient(270deg, #000000 -101.82%, #CE9BEE -23.23%, #1D607D 132.49%, #FFFFFF 165.31%);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    right: 0;
+}
+  
+#botaoVolt:hover {
+    background: #ddd;
+    color: black;
+}
+
+.retorno{
+    color: #FF5733;
+    padding: 15px;
+}
+
+.retorno2{
+    color: #50C878;
+}
