@@ -55,9 +55,15 @@ body{
 
 form [type="submit"]{
     display: block;
-    background-color: #4e628e;
+    background: linear-gradient(270deg, #000000 -101.82%, #CE9BEE -23.23%, #1D607D 132.49%, #FFFFFF 165.31%);
+    color: #fff;
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
     
+}
+
+.retorno{
+    color: #FF5733;
+    padding: 15px;
 }
